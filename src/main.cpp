@@ -1,9 +1,12 @@
 #include <cstdlib>
 #include <iostream>
 
+#include "../include/App.h"
+
 using namespace std;
 
 int menu() {
+	App menuApp;
     char option;
 
     cout << "Escolha a opção:\n";
@@ -17,7 +20,7 @@ int menu() {
 
     switch (option) {
         case '1':
-            cout << "1";
+            menuApp.update();
             menu();
             break;
 
