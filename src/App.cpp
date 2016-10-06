@@ -8,7 +8,38 @@
 #include "../include/App.h"
 
 namespace std {
-	void App::ppa(char ppa[]) {}
+	void App::ppa(string ppa) {
+		App::command = "sudo add-apt-repository ppa:";
+		App::command.append(ppa);
 
-	void App::install(){}
+		system(App::command.c_str());
+		system("sudo apt update");
+	}
+
+	int App::install(bool setppa){
+		string appPpa;
+		string appName;
+
+		cout << "Informe o nome da aplicação.\n";
+		cin >> appName;
+
+		if (setppa) {
+			cout << "Deseja inserir um PPA para a aplicação (somente o nome do ppa. Ex.: dev/app)?[S\\n]";
+			cin >> App::choice;
+
+			if (App::contidion()) {
+				cout << "Digite o PPA da aplicação.\n";
+				cin >> appPpa;
+
+				App::ppa(appPpa);
+			}
+		}
+
+		App::command = "sudo apt install -y ";
+		App::command.append(appName);
+
+		system(App::command.c_str());
+
+		return 0;
+	}
 } /* namespace std */

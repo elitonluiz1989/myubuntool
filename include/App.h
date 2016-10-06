@@ -8,14 +8,15 @@
 #ifndef APP_H_
 #define APP_H_
 
-#include "../include/SystemManager.h"
+#include "Ubuntu.h"
 
 namespace std {
 
-class App: public SystemManager {
+class App: public Ubuntu {
+	string command;
 	public:
-		void ppa(char ppa[]);
-		void install();
+		void ppa(string ppa);
+		int install(bool setppa = true);
 };
 
 } /* namespace std */
