@@ -7,7 +7,7 @@ using namespace std;
 
 int menu() {
 	App menuApp;
-    char option;
+    int option;
 
     cout << "Escolha a opção:\n";
     cout << "1 - Atualizar sistema.\n";
@@ -19,27 +19,27 @@ int menu() {
     cin >> option;
 
     switch (option) {
-        case '1':
+        case 1:
             menuApp.update();
             menu();
             break;
 
-        case '2':
-            cout << "2";
+        case 2:
+            menuApp.installation();
             menu();
             break;
 
-        case '3':
+        case 3:
             cout << "3";
             menu();
             break;
 
-        case '4':
+        case 4:
             cout << "4";
             menu();
             break;
 
-        case '5':
+        case 5:
             return EXIT_SUCCESS;
 
         default:
