@@ -1,11 +1,4 @@
-/*
- * App.cpp
- *
- *  Created on: 27 de set de 2016
- *      Author: elitonluiz
- */
-
-#include "../include/App.h"
+#include "App.h"
 
 namespace std {
 	void App::ppa(string ppa) {

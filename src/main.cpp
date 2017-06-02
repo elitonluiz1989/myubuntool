@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "../include/App.h"
+#include "App.h"
 
 using namespace std;
 

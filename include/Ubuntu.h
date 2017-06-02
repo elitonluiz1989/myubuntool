@@ -1,10 +1,3 @@
-/*
- * UBUNTU.h
- *
- *  Created on: 27 de set de 2016
- *      Author: elitonluiz1989
- */
-
 #ifndef UBUNTU_H_
 #define UBUNTU_H_
 

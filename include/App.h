@@ -1,10 +1,3 @@
-/*
- * App.h
- *
- *  Created on: 27 de set de 2016
- *      Author: elitonluiz1989
- */
-
 #ifndef APP_H_
 #define APP_H_
 

@@ -1,11 +1,4 @@
-/*
- * Ubuntu.cpp
- *
- *  Created on: 27 de set de 2016
- *      Author: elitonluiz1989
- */
-
-#include "../include/Ubuntu.h"
+#include "Ubuntu.h"
 
 bool Ubuntu::contidion() {
 	return (Ubuntu::choice == "S" || Ubuntu::choice == "s") ? true : true;
