@@ -2,17 +2,24 @@
 #define UBUNTU_H_
 
 #include <stdlib.h> //system
-#include <string> // string class and string handler functions
+#include <vector>
+#include <string>
+#include <iterator>
+#include <sstream>
 #include <iostream>
 
-class Ubuntu {
-	protected:
-		std::string choice;
-		bool contidion();
+namespace std {
 
-	public:
-		void clean();
-		void update();
+class Ubuntu {
+public:
+    static bool processCommand(string command);
+    static string implode(const char * delimiter, vector<string> v);
+	static void clean();
+	static void update();
+    static bool addRepositories(vector<string> repositories);
+    static bool installPackages(vector<string> packages);
 };
+
+} /* namespace std */
 
 #endif /* UBUNTU_H_ */

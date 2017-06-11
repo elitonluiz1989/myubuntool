@@ -1,20 +1,21 @@
 #ifndef APP_H_
 #define APP_H_
 
+#include <map>
 #include "Ubuntu.h"
 
 namespace std {
 
 class App: public Ubuntu {
-	private:
-	string command;
+private:
+    map<int, string> messages;
+protected:
+	void ppa(string ppaText);
+	void install();
 
-	protected:
-		void ppa(string ppa);
-		void install(string name);
-
-	public:
-		int installation(bool setppa = true);
+public:
+    App();
+	int installation();
 };
 
 } /* namespace std */
