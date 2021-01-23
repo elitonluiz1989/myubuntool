@@ -2,13 +2,15 @@
 #define APP_H_
 
 #include <map>
+#include "ISystem.h"
 #include "Ubuntu.h"
 
 namespace std {
 
-class App: public Ubuntu {
+class App {
 private:
     map<int, string> messages;
+	ISystem *system;
 protected:
 	void ppa(string ppaText);
 	void install();
@@ -16,6 +18,7 @@ protected:
 public:
     App();
 	int installation();
+	int menu(int option);
 };
 
 } /* namespace std */
